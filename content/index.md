@@ -1,25 +1,26 @@
 ---
-title: "Min fina titel"
+title: "Me-sida design"
+
+views:
+    byline:
+        region: main
+        template: anax/v2/block/default
+        sort: 2
+        data:
+            meta:
+                type: single
+                route: block/byline
+
 ---
-Min me-sida i kursen design
-=========================
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/index.md`.
+# Min me-sida i kursen design
 
-[FIGURE src="image/me.jpg?w=500" class="right" caption="Bild på mig"]
+[FIGURE src=image/marbella1.jpg?w=500 class=right caption="Marbella, väldigt bra surfspot i Costa Rica"]
 
-Detta är min me-sida i kursen. Denna sidan innehåller en presentation av mig själv. Underhåll denna sidan under hela kursen och uppdatera den efter hand och behov.
+Hej! Isabella Carrera heter jag pluggar Webbprogrammering på distans ifrån andra sidan jordklotet, Costa Rica är landet jag kallar mitt hem.
 
-Så, en presentation en bra början. Skriv några ord om dig själv. Jag börjar.
+Jag älskar att surfa, yoga, simma, vara på stranden ochi naturen, köra motorcykel, träna och upptäcka nya platser tillsammans med människor jag älskar. Min största kärlek i livet är surfningen som jag fann för drygt ett år sedan och aldrig vill lämna. All jag gör planerar jag efter när vågorna är som bäst att surfa.
 
-Mitt namn är Mikael Roos. Född och uppvuxen i Bankeryd, Småland, strax utanför Jönköping, i ett villaområde som byggdes upp samtidigt som vi flyttade in där. Jag gillade landhockey och har spelat bandy och hockey samt gått bowlinggymnasiet i Nässjö. Jag har varit städare, diskare, kallskänka, servitör och kock. På ett bananskal landade jag i Ronneby när jag började högskolan 1990 där och nu är jag kvar med fru, barn och så vidare.
+Planen är att föralltid stanna i Costa Rica, leva ett enkelt och simpelt liv på stranden, och jag hoppas att denna kurs och de andra som kommer i webbprogrammeringsprogrammet kommer hjälpa mig med det. Om inte får jag väl bli surfinstruktör på heltid eller något liknande.
 
-Programmering har alltid intresserat mig sedan 13-årsåldern och min första dator var en Spectravideo 328 med bandspelare.
-
-Om jag skall nämna någon hobby, förutom webbprogrammering, så får det bli att bära sten på sommarstugetomten, och det finns sten så det räcker och blir över.
-
-Till och från får jag för mig att börja på lite hobbies, ett år satsade jag på pokerspel, ett annat år var det geocaching och sedan turfing. Nu ligger jag lågt med hobbies, men något kanske dyker upp...?
-
-Vi syns och hörs i forum och chatt!
-
-/Mikael
+Vi hörs!
