@@ -1,0 +1,80 @@
+
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+ @import url("https://fonts.googleapis.com/css?family=Slabo+27px");
+
+
+/**
+ * General layout
+ */
+.inner-wrap {
+    margin: 0 auto;
+    max-width: 950px;
+    background-color: #fff7f8;
+    padding: 30px;
+    font-size: 110%;
+    font-family: 'Slabo 27px', Arial;
+}
+
+.footer-column {
+    width: 33%;
+    float: left;
+}
+
+// li {
+//     list-style-type: none;
+// }
+
+ul {
+    padding-left: 0;
+}
+
+.inner-wrap-footer,
+.outer-wrap-footer {
+    background-color: @bgColorHtml;
+}
+
+.inner-wrap-header {
+    max-width: 100%;
+}
+
+.region-header-col-1,
+.region-header-col-3 {
+    width: 10%;
+    float: left;
+}
+
+.region-header-col-2 {
+    width: 60%;
+    float: left;
+    text-align: center;
+}
+
+.outer-wrap-header {
+    height: 80px;
+    background-color: #fff7f8;
+}
+
+.region-sidebar-right {
+    width: 25%;
+    float: left;
+    display: inline;
+}
+
+.region-main {
+    width: 75%;
+    float: left;
+    display: inline;
+}
+
+.row::after {
+    content:"";
+    display:block;
+    clear:both
+}
