@@ -67,7 +67,6 @@ body {
   background-color: #fff7f8;
   padding: 30px;
   font-size: 110%;
-  font-family: 'Slabo 27px', Arial;
 }
 .footer-column {
   width: 33%;
@@ -98,6 +97,11 @@ ul {
   background-color: #fff7f8;
 }
 .region-sidebar-right {
+  width: 25%;
+  float: left;
+  display: inline;
+}
+.block.toc {
   width: 25%;
   float: left;
   display: inline;
