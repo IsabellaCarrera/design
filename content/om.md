@@ -27,9 +27,9 @@ views:
 Om
 =========================
 
+[FIGURE src=image/webbdesign.jpg?w=650]
 Denna hemsida skapas i och med kursen design som pågår från Blekinge Tekniska Högskola, denna kurs är tänkt att läsas för att få en inlblick i design och för att som webbprogrammerare kunna konversera med en designer.
 
-[FIGURE src=image/webbdesign.jpg?w=650]
 
 [Mitt git-repo](https://github.com/IsabellaCarrera/design.git)
 [Kursens git-repo]()
