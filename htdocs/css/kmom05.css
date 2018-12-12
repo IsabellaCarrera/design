@@ -1,19 +1,13 @@
 /*!
- * Stylesheet for design kmom03.
+ * Stylesheet for design kmom05.
  *
  * This stylesheet is for the design course and kmom03 where we use LESS.
  */
 @font-face {
-  font-family: 'Raleway';
+  font-family: 'Work Sans';
   font-style: normal;
-  font-weight: 400;
-  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Shadows Into Light';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Shadows Into Light'), local('ShadowsIntoLight'), url(https://fonts.gstatic.com/s/shadowsintolight/v7/UqyNK9UOIntux_czAvDQx_ZcHqZXBNQzdcD8.ttf) format('truetype');
+  font-weight: 200;
+  src: local('Work Sans ExtraLight'), local('WorkSans-ExtraLight'), url(https://fonts.gstatic.com/s/worksans/v3/QGYpz_wNahGAdqQ43Rh3s4H8mNhI.ttf) format('truetype');
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -321,7 +315,16 @@ template {
   display: none;
 }
 /**
- * Internal self contained modules, save in directory module/.
+ * Figure and figcaption for images and other media using figure/figcaption
+ */
+/**
+ * Figure with ASCIINEMA
+ */
+/**
+ * Figure with Codepen
+ */
+/** --------------------------------------------------------------
+ * Figure through .figure
  */
 /**
 * A responsive menu.
@@ -617,14 +620,14 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  */
 html {
   overflow-y: scroll;
-  background-color: #ccff99;
+  background-color: #fff;
 }
 body {
   margin: 0;
   padding: 0;
-  color: #333;
-  background-color: #ccff99;
-  font: 18px/1.22222222 'Raleway', sans-serif;
+  color: #000;
+  background-color: #fff;
+  font: 18px/1.22222222 'Work Sans', sans-serif;
 }
 h1,
 h2,
@@ -632,7 +635,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Shadows Into Light', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   margin-top: 22px;
   margin-bottom: 22px;
 }
@@ -910,9 +913,6 @@ hr::after {
   padding: 0 0.25em;
   background-color: #fff;
 }
-img {
-  max-width: 100%;
-}
 /**
  * Import the vertical grid.
  */
@@ -946,12 +946,6 @@ img {
      */
 }
 /**
-Layout using vgrid.
- */
-/**
- * Variables
- */
-/**
  * General layout
  */
 .row {
@@ -970,7 +964,7 @@ Layout using vgrid.
   margin-right: auto;
   margin-left: auto;
   max-width: 1000px;
-  background-color: #fff7f8;
+  background-color: #fff;
   font-size: 100%;
 }
 .inner-wrap-header,
@@ -999,8 +993,15 @@ Layout using vgrid.
     background-size: 100% auto;
   }
 }
+.previous,
+.next {
+  display: none;
+}
 li {
   list-style-type: none;
+}
+.region-breadcrumb {
+  display: none;
 }
 .region-main {
   display: inline;
@@ -1051,13 +1052,6 @@ li {
   display: block;
   clear: both;
 }
-.breadcrumb-list {
-  display: inline;
-  float: left;
-  width: 98.95833333%;
-  margin-left: 0.52083333%;
-  margin-right: 0.52083333%;
-}
 .wrap-sidebar {
   display: inline;
   float: left;
@@ -1082,25 +1076,27 @@ li {
 /*
 * Header layout
 */
-.region-header-col-1,
+.region-header-col-1 {
+  display: none;
+}
 .region-header-col-3 {
   display: inline;
   float: left;
-  width: 19.79166667%;
+  width: -1.04166667%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
 }
 .region-header-col-2 {
   display: inline;
   float: left;
-  width: 57.29166667%;
+  width: 98.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
   text-align: center;
 }
 .outer-wrap-header {
   height: 80px;
-  background-color: #fff7f8;
+  background-color: #fff;
 }
 /*
 * Footer layout
@@ -1112,16 +1108,128 @@ li {
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
 }
-.inner-wrap-footer,
-.outer-wrap-footer {
-  background-color: #ccff99;
-}
 .site-footer {
   display: inline;
   float: left;
   width: 98.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+}
+figure.figure,
+figure.asciinema,
+figure.codepen,
+figure.figure-codepen {
+  display: table;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 22px;
+  /* Chrome shinks images in td */
+  /* Position the images */
+}
+figure.figure img {
+  max-width: 100%;
+  display: block;
+}
+figure.figure figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  padding-top: 11px;
+}
+figure.figure figcaption p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: italic;
+}
+figure.figure td img {
+  max-width: none;
+}
+figure.figure.center {
+  clear: both;
+  margin: auto;
+}
+figure.figure.center figcaption {
+  text-align: center;
+}
+figure.figure.left {
+  float: left;
+  margin-right: 0.5em;
+}
+figure.figure.right {
+  float: right;
+  margin-left: 0.5em;
+}
+@media screen and (max-width: 963px) {
+  figure.figure.left.w67,
+  figure.figure.right.w67 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w67 img,
+  figure.figure.right.w67 img {
+    width: 962.5px;
+  }
+}
+@media screen and (max-width: 733px) {
+  figure.figure.left.w50,
+  figure.figure.right.w50 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w50 img,
+  figure.figure.right.w50 img {
+    width: 733.33333333px;
+  }
+}
+@media screen and (max-width: 688px) {
+  figure.figure.left.w40,
+  figure.figure.right.w40 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w40 img,
+  figure.figure.right.w40 img {
+    width: 687.5px;
+  }
+}
+@media screen and (max-width: 550px) {
+  figure.figure.left.w33,
+  figure.figure.right.w33 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w33 img,
+  figure.figure.right.w33 img {
+    width: 550px;
+  }
+}
+@media screen and (max-width: 367px) {
+  figure.figure.left.w25,
+  figure.figure.right.w25 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  figure.figure.left.w25 img,
+  figure.figure.right.w25 img {
+    width: 366.66666667px;
+  }
+}
+figure.asciinema {
+  display: block;
+}
+figure.asciinema figcaption {
+  display: block;
+}
+figure.asciinema .asciicast {
+  margin: 0 !important;
+}
+figure.codepen,
+figure.figure-codepen {
+  width: 100%;
 }
 /*
 * Responsive 1, 2, 3
