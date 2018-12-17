@@ -1,3 +1,2 @@
-#### Footer col 3
-
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+[FIGURE src=image/morocco.png?h=210&crop-to-fit class="left"]
+[FIGURE src=image/morocco.png?h=210&crop-to-fit class="right"]

@@ -15,7 +15,7 @@ views:
 
 # Min me-sida i kursen design
 
-[FIGURE src=image/marbella1.jpg?w=500 class=right caption="Marbella, väldigt bra surfspot i Costa Rica"]
+[FIGURE src=image/movement6.jpg?w=500 class=right]
 
 Hej! Isabella Carrera heter jag pluggar Webbprogrammering på distans ifrån andra sidan jordklotet, Costa Rica är landet jag kallar mitt hem.
 

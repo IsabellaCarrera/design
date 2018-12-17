@@ -21,4 +21,6 @@ views:
 ### Test
 
 
-Här ska jag testa litegranna.                 
+Här ska jag testa litegranna.     
+
+[FIGURE src=image/movement2.jpeg?w=800]            

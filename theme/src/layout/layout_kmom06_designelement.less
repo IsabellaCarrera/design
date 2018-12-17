@@ -1,0 +1,196 @@
+
+
+/**
+ * General layout
+ */
+
+.outer-wrap.outer-wrap-main {
+    background-color: #fff;
+    color: #000;
+}
+
+.row {
+    #desinax-vgrid.row();
+    margin-bottom: 12px;
+}
+
+
+.inner-wrap {
+    #desinax-vgrid.grid(1000px);
+    font-size: 100%;
+}
+
+.inner-wrap-header,
+.inner-wrap-footer {
+    #desinax-vgrid.grid(100%);
+}
+
+.vgrid .inner-wrap {
+    @gridImage: "../img/grid_24x30x10-nomargin.png";
+    #desinax-vgrid.showGrid(@gridImage, 1000px);
+
+    &.inner-wrap-header,
+    &.inner-wrap-footer {
+        #desinax-vgrid.showGrid(@gridImage);
+    }
+}
+
+.previous,
+.next {
+    display: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+.region-breadcrumb {
+    display: none;
+}
+
+.region-main {
+    display: inline;
+    #desinax-vgrid.column(@columns * 3 / 4);
+    #desinax-vgrid.push(3);
+
+    &.has-sidebar {
+        #desinax-vgrid.push(0);
+    }
+
+    &.has-sidebar-right {
+        #desinax-vgrid.column(@columns * 3 / 4 - 1);
+
+    }
+
+    &.has-sidebar-left.has-sidebar-right {
+        #desinax-vgrid.column(@columns - 10);
+    }
+}
+
+.wrap-sidebar.region-sidebar-left,
+.wrap-sidebar.region-sidebar-right {
+    #desinax-vgrid.column(@columns * 1 / 4);
+}
+
+.wrap-sidebar.region-sidebar-right {
+    #desinax-vgrid.push(1);
+}
+
+.wrap-sidebar.region-sidebar-left.has-sidebar-right,
+.wrap-sidebar.region-sidebar-right.has-sidebar-left {
+ #desinax-vgrid.column(@columns * 1 / 4 - 1);
+}
+
+
+
+.row::after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+
+.wrap-sidebar {
+    #desinax-vgrid.column(@columns);
+}
+
+.region-flash {
+    #desinax-vgrid.column(@columns);
+}
+
+.region-flash-message {
+    #desinax-vgrid.column(@columns);
+}
+
+/*
+* Header layout
+*/
+
+.region-header-col-1 {
+    display: none;
+}
+.region-header-col-3 {
+    #desinax-vgrid.column(0);
+}
+
+.region-header-col-2 {
+    #desinax-vgrid.column(24);
+    text-align: center;
+}
+
+.outer-wrap-header {
+    height: 80px;
+    background-color: #fff;
+    color: #000;
+}
+
+
+/*
+* Footer layout
+*/
+
+.footer-column {
+    #desinax-vgrid.column(@columns / 3);
+}
+
+.site-footer {
+    #desinax-vgrid.column(@columns);
+}
+
+wrap-all {
+    background: url(https://www.gettyimages.com/gi-resources/images/CreativeLandingPage/HP_Sept_24_2018/CR3_GettyImages-159018836.jpg) no-repeat left fixed !important
+}
+
+// Enable style from the module and optinally add customized layout
+figure.figure {
+    #desinax-figure.figure();
+}
+
+figure.asciinema {
+    &:extend(figure.figure);
+    #desinax-figure.asciinema();
+}
+
+figure.codepen,
+figure.figure-codepen {
+    &:extend(figure.figure);
+    #desinax-figure.codepen();
+}
+
+
+/*
+* Responsive 1, 2, 3
+*/
+
+@media screen and (max-width: 850px) {
+    .region-main {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .wrap-sidebar.region-sidebar-left {
+        #desinax-vgrid.column(@columns);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .region-main.has-sidebar-right {
+            #desinax-vgrid.column(@columns);
+    }
+
+    .wrap-sidebar.region-sidebar-right {
+        #desinax-vgrid.push(0);
+        #desinax-vgrid.column(@columns);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .region-main.has-sidebar-left.has-sidebar-right {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .wrap-sidebar.region-sidebar-left.has-sidebar-right,
+    .wrap-sidebar.region-sidebar-right.has-sidebar-left {
+     display: none;
+    }
+}
